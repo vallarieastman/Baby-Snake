@@ -28,7 +28,7 @@ public class Game implements KeyListener {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     public void start() {
-        graphics.state = "RUNNING";
+        graphics.state = "MENU";
     }
 
     public void update() {
@@ -79,26 +79,34 @@ public class Game implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
 
-        if(graphics.state == "RUNNING") {
-            if(keyCode == KeyEvent.VK_W && player.getMove() != "DOWN") {
-                player.up();
-            }
-
-            if(keyCode == KeyEvent.VK_S && player.getMove() != "UP") {
-                player.down();
-            }
-
-            if(keyCode == KeyEvent.VK_A && player.getMove() != "RIGHT") {
-                player.left();
-            }
-
-            if(keyCode == KeyEvent.VK_D && player.getMove() != "LEFT") {
-                player.right();
+        if (graphics.state == "START") {
+            if (keyCode == KeyEvent.VK_Q) {
+                graphics.state = "END";
+            } else {
+                graphics.state = "RUNNING";
             }
         }
-        else {
-            this.start();
-        }
+            if (graphics.state == "RUNNING") {
+                if (keyCode == KeyEvent.VK_W  && player.getMove() != "DOWN") {
+                    player.up();
+                }
+
+                if (keyCode == KeyEvent.VK_S && player.getMove() != "UP") {
+                    player.down();
+                }
+
+                if (keyCode == KeyEvent.VK_A && player.getMove() != "RIGHT") {
+                    player.left();
+                }
+
+                if (keyCode == KeyEvent.VK_D && player.getMove() != "LEFT") {
+                    player.right();
+                }
+
+            } else {
+                this.start();
+
+            }
     }
 
     @Override
