@@ -52,7 +52,11 @@ public class Graphics extends JPanel implements ActionListener {
 
         if (state == "START") {
             g2d.setColor(Color.white);
-            g2d.drawString("Press Any Key", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension - 20);
+            g2d.drawString("Press Any Key", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension - 50);
+            g2d.drawString("w = up", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension - 40);
+            g2d.drawString("s = down", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension - 30);
+            g2d.drawString("a = left", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension - 20);
+            g2d.drawString("d = right", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension - 10);
 
         } else if (state == "RUNNING") {
             g2d.setColor(Color.red);
