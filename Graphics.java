@@ -1,3 +1,7 @@
+/*
+This class creates a the object 'graphics' which paints in the components of the game.
+
+ */
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

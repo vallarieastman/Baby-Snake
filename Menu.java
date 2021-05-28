@@ -1,3 +1,8 @@
+/*
+This class creates the menu object. It displayes the title, and uses Graphics and graphics2D to create
+play and quit buttons.
+
+ */
 import java.awt.*;
 import java.awt.Graphics;
 

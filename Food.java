@@ -1,3 +1,7 @@
+/*
+This class creates an object food which spawns the food randomly and gets and sets its location.
+
+ */
 import java.awt.Rectangle;
 
 public class Food {
