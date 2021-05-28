@@ -16,6 +16,9 @@ public class Game implements KeyListener {
     public static final int height= 60;
     public static final int dimension = 10;
 
+    //simulatedPlayers = new ConcurrentHashMap<Integer, SimulatedPlayer>();??
+
+    //This is the board
     public Game(){
         window = new JFrame();
         player = new Snake();
@@ -27,10 +30,12 @@ public class Game implements KeyListener {
         window.setVisible(true);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+    //starts at the menu state
     public void start() {
         graphics.state = "MENU";
     }
 
+    //updates the board state, snake body, and spawns food
     public void update() {
         if(graphics.state == "RUNNING") {
             if(check_food_collision()) {
@@ -78,14 +83,18 @@ public class Game implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
-
+    //Game state stuff:
+        //game state start means that the start menu and directions are being shown
         if (graphics.state == "START") {
+            //player can hit q to quit
             if (keyCode == KeyEvent.VK_Q) {
                 graphics.state = "END";
             } else {
+                //game state running means the game is actually being played.
                 graphics.state = "RUNNING";
             }
         }
+        //as long as the game state is running, the keyevent w,a,s,d will control the snake
             if (graphics.state == "RUNNING") {
                 if (keyCode == KeyEvent.VK_W  && player.getMove() != "DOWN") {
                     player.up();
@@ -108,11 +117,17 @@ public class Game implements KeyListener {
 
             }
     }
+/*
+    public static void createSimulatedPlayers() {
+        }
+    }
+ */
 
     @Override
     public void keyReleased(KeyEvent e) {
     }
 
+    //getters and setters for player, food, and window
     public Snake getPlayer() {
        return player;
     }

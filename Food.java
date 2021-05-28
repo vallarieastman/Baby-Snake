@@ -24,7 +24,7 @@ public class Food {
             }
         }
     }
-
+    //getters and setters
     public int getX() {
         return x;
     }

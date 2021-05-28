@@ -46,9 +46,12 @@ public class Graphics extends JPanel implements ActionListener {
         g2d.setColor(Color.black);
         g2d.fillRect(0, 0, Game.width * Game.dimension, Game.height * Game.dimension);
 
+        //if-statement for the game state
         if (state == "MENU") {
+            //calls Menu
             Menu.mainMenu(g);
         } else if (state == "START") {
+            //the graphics for the start directions
             Font fnt3 = new Font("arial", Font.BOLD, 40);
             g.setFont(fnt3);
             g.setColor(Color.white);
@@ -62,14 +65,17 @@ public class Graphics extends JPanel implements ActionListener {
             g.drawString("d = right", Game.width / 2 * Game.dimension - 40, Game.height / 2 * Game.dimension + 20);
 
         } else if (state == "RUNNING") {
+            //the food is magenta and filled
             g.setColor(Color.magenta);
             g.fillRect(f.getX() * Game.dimension, f.getY() * Game.dimension, Game.dimension, Game.dimension);
 
+            //the snake is green and filled in, accesses the body array
             g.setColor(Color.green);
             for (Rectangle r : s.getBody()) {
                 g2d.fill(r);
             }
         } else {
+            //score font at the end of the game or if the player hits q for quit
             Font fnt2 = new Font("arial", Font.BOLD, 60);
             g.setFont(fnt2);
             g.setColor(Color.white);
@@ -77,7 +83,7 @@ public class Graphics extends JPanel implements ActionListener {
         }
     }
 
-    //Action Listener
+    //Action Listener, repaints and updates
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();

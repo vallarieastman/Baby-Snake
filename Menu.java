@@ -3,9 +3,9 @@ import java.awt.Graphics;
 
 public class Menu {
     //buttons
-    public static Rectangle playButton = new Rectangle(Game.width / 2 * Game.dimension -50, Game.height / 2 * Game.dimension - 30, 100, 50,);
+    public static Rectangle playButton = new Rectangle(Game.width / 2 * Game.dimension -50, Game.height / 2 * Game.dimension - 30, 100, 50);
     public static Rectangle quitButton = new Rectangle(Game.width / 2 * Game.dimension - 50, Game.height / 2 * Game.dimension + 60, 100, 50);
-    
+
 
     public static void mainMenu(Graphics g){
         //casts Graphics2D as Graphics

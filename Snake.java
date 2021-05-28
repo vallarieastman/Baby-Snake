@@ -9,9 +9,13 @@ public class Snake {
 
     private String move; //NOTHING, UP, DOWN, LEFT, RIGHT
 
+
     public Snake() {
+        //array containing snake body
         body = new ArrayList<>();
 
+        //makes the rectangle template for the snake body
+        //There are better ways to do this, but I liked the aesthetics of the retro rectangles. -Vallari
         Rectangle temp = new Rectangle(Game.dimension, Game.dimension);
         temp.setLocation(Game.width / 2 * Game.dimension, Game.height / 2 * Game.dimension);
         body.add(temp);
@@ -24,9 +28,11 @@ public class Snake {
         temp.setLocation((w / 2 - 2) * d, (h / 2) * d);
         body.add(temp);
 
+        //sets variable move to nothing
         move = "NOTHING";
     }
 
+    //move method moves the head of the snake.
     public void move() {
         if(move != "NOTHING") {
             Rectangle head = body.get(0);
@@ -51,6 +57,8 @@ public class Snake {
         }
     }
 
+
+    //grows the body of the snake
     public void grow() {
         Rectangle head = body.get(0);
 
@@ -72,11 +80,13 @@ public class Snake {
         body.add(0, temp);
     }
 
+    //An array of rectangles for the body
+    //was helpful: https://docs.oracle.com/javase/7/docs/api/java/awt/Rectangle.html
     public ArrayList<Rectangle> getBody() {
         return body;
     }
 
-
+    //getters and setters
     public void setBody(ArrayList<Rectangle> body) {
         this.body = body;
     }
