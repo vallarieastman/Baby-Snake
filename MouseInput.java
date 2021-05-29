@@ -1,7 +1,7 @@
 /*
 This class creates an object for mouse input, takes mouse event e and returns mouse x and mouse y
 code referenced from: https://www.youtube.com/watch?v=qfjxLRrHS0c
-code by Mohammed Alshaher
+code by Mariam
  */
 
 import java.awt.*;

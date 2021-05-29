@@ -1,6 +1,6 @@
 /*
 This class creates the snake object. It uses an array list for the body, moves the snake, and grows the body.
-written by Vincent Melevo and Vallari Eastman
+written by Mohammad
  */
 import java.awt.Rectangle;
 import java.util.ArrayList;

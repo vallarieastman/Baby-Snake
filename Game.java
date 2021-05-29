@@ -2,7 +2,7 @@
 This class creates the board. It sets the dimensions of the board. It starts and updates the board.
 It also checks for collisions with the snake, the walls, and the food.
 And it uses Keylistener to get keyboard input from the user.
-Written by Mariam and Mohammed
+Written by Patrick Chea
  */
 import javax.swing.JFrame;
 import java.awt.event.KeyEvent;

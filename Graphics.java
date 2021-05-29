@@ -2,7 +2,7 @@
 This class creates a the object 'graphics' which paints in the components of the game.
 This was a really helpful repository to reference:
 https://github.com/abelacosta/SnakeOnline/blob/master/client/src/com/blu3flux/GUI/SnakePanel.java
-In collaboration by Vallari and Patrick
+by Vincent
  */
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +15,7 @@ import javax.swing.Timer;
 
 public class Graphics extends JPanel implements ActionListener {
     //renders every 100ms
+    //chose this over a tick method because this seems more efficient
     private Timer t = new Timer(100, this);
     //initializes variable for game state
     public static String state;
