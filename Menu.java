@@ -16,6 +16,8 @@ public class Menu {
         //casts Graphics2D as Graphics
         Graphics2D g2d = (Graphics2D) g;
 
+        //This was also a hepful reference: https://www.codota.com/code/java/methods/java.awt.Graphics/setFont
+
         Font fnt0 = new Font("arial", Font.BOLD, 60);
         g.setFont(fnt0);
         g.setColor(Color.white);
