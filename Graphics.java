@@ -2,7 +2,7 @@
 This class creates a the object 'graphics' which paints in the components of the game.
 This was a really helpful repository to reference:
 https://github.com/abelacosta/SnakeOnline/blob/master/client/src/com/blu3flux/GUI/SnakePanel.java
-
+In collaboration by Vallari and Patrick
  */
 import java.awt.*;
 import java.awt.event.ActionEvent;
